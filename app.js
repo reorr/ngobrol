@@ -19,8 +19,12 @@ app.get('/modalScript.js', (req,res)=>{
     res.sendFile(__dirname + '/client/modalScript.js');
 });
 
+const PORT = process.env.PORT || 5001;
+
 //Listen on port 5000
-server = app.listen( process.env.PORT || 5000);
+server = app.listen( PORT );
+
+console.log(`Server is listening on port ${PORT}...`)
 
 //socket.io instantiation
 const io = require("socket.io")(server);
