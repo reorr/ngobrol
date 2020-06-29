@@ -19,6 +19,10 @@ app.get('/modalScript.js', (req,res)=>{
     res.sendFile(__dirname + '/client/modalScript.js');
 });
 
+app.get('/css/style.css', (req,res)=>{
+    res.sendFile(__dirname + '/client/css/style.css');
+});
+
 const PORT = process.env.PORT || 5001;
 
 //Listen on port 5000
